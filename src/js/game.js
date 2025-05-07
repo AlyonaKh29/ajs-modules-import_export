@@ -1,4 +1,4 @@
-const Character = require('./domain');
+import Character from './domain.js';
 
 
 class Game {
@@ -16,8 +16,6 @@ function readGameSaving() {
 function writeGameSaving() {
 }
 
-module.exports = Game;
-exports.GameSavingData = GameSavingData;
-exports.readGameSaving = readGameSaving;
-exports.writeGameSaving = writeGameSaving;
+export default Game;
+export { GameSavingData, readGameSaving, writeGameSaving };
 

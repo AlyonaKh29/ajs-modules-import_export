@@ -1,12 +1,12 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+import path from 'path';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
-module.exports = {
+export default {
     entry: './src/index.js',
     output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(process.cwd(), 'dist'),
         clean: true,
     },
     module: {
@@ -33,7 +33,7 @@ module.exports = {
     mode: 'development',
     devtool: 'inline-source-map',
     devServer: {
-        static: path.resolve(__dirname, 'dist'),
+        static: path.resolve(process.cwd(), 'dist'),
         port: 3000,
     },
 };

@@ -1,5 +1,5 @@
-require('./css/style.css');
+import './css/style.css';
 
-const app = require('./js/app.js');
+import './js/app.js';
 
 // TODO: write your code in app.js
